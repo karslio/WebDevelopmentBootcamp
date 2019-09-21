@@ -1,9 +1,13 @@
 <%- include('partials/header'); -%>
 <h1>COMPOSE</h1>
-<form class="form-inline">
-    <div class="form-group mx-sm-3 mb-2">
-        <label for="inputPassword2" class="sr-only">Password</label>
-        <input type="password" class="form-control" id="inputPassword2" placeholder="Password" />
+<form class="form-row" action="/compose" method="POST">
+    <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" name="postTitle" id="postTitle" placeholder="" />
+    </div>
+    <div class="form-group">
+        <label for="">Post</label>
+        <textarea class="form-control" name="postBody" id="postBody" rows="5" cols="30"></textarea>
     </div>
     <button type="submit" class="btn btn-primary mb-2">Publish</button>
 </form>
