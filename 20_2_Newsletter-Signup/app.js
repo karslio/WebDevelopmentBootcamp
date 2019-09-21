@@ -18,9 +18,7 @@ app.post("/", function(req, res) {
   console.log(req.body, firstName, lastName, email);
 });
 app.listen(3002, function() {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on port 3002");
 });
-
-
 
 //cc891550998c05e853dc3f2cc4642c9a-us4
