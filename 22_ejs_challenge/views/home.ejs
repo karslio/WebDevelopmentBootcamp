@@ -2,11 +2,17 @@
 <h1>HOME</h1>
 
 <p><%= startingContent %></p>
-<div>
-    <% posts.forEach(post => {  %>
+<form action="/" method="post">
+  <div>
+    <% posts.forEach(post => { %>
     <h1><%= post.title %></h1>
-    <p><%= post.body %></p>
+    <p>
+      <%= post.body.substring(0,100) + "..." %>
+      <a href="/posts/:<%= post.title %>">Read</a>
+    </p>
     <% }); %>
-</div>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Add More</button>
+</form>
 
 <%- include('partials/footer'); -%>
